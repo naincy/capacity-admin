@@ -11,7 +11,6 @@ import {
   TeamMember,
   TeamMateAddButton
 }                         from '../../components';
-import Highlight          from 'react-highlight';
 import DamonIMG           from '../../img/Damon.png';
 import JoeIMG             from '../../img/Joe.png';
 import EmmaIMG            from '../../img/Emma.png';
@@ -170,18 +169,6 @@ class TeamMatesView extends PureComponent {
                 }
               </TeamMates>
               <TeamMateAddButton />
-            </Panel>
-          </div>
-        </div>
-        {/* source: */}
-        <div className="row">
-          <div className="col-xs-12">
-            <Panel
-              title="Source"
-              hasTitle={true}>
-              <Highlight className="javascript">
-                {source}
-              </Highlight>
             </Panel>
           </div>
         </div>

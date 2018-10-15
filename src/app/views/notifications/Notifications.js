@@ -75,16 +75,6 @@ class Notifications extends PureComponent {
                   Best check yo self, you're not looking too good.
                 </span>
               </Notification>
-
-              <Notification type={'danger'}>
-                <span>
-                  <strong>
-                    Oh snap!
-                  </strong>
-                  Change a few things up and try submitting again.
-                </span>
-              </Notification>
-
           </NotificationPanel>
         </div>
       </div>
@@ -138,32 +128,10 @@ class Notifications extends PureComponent {
                           Best check yo self, you're not looking too good.
                         </span>
                       </Notification>
-
-                      <Notification type={'danger'}>
-                        <span>
-                          <strong>
-                            Oh snap!
-                          </strong>
-                          Change a few things up and try submitting again.
-                        </span>
-                      </Notification>
-
                   </NotificationPanel>
 
                 </div>
               </div>
-            </Panel>
-          </div>
-        </div>
-        {/* source: */}
-        <div className="row">
-          <div className="col-xs-12">
-            <Panel
-              title="Source"
-              hasTitle={true}>
-              <Highlight className="javascript">
-                {source}
-              </Highlight>
             </Panel>
           </div>
         </div>

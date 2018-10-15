@@ -9,7 +9,7 @@ export const appConfig = {
   FAKE_ASYNC_DELAY: 1000,
 
 
-  APP_NAME: 'reactDirector',
+  APP_NAME: 'VacationTracker',
 
   // connection status text references
   CONNECTION_STATUS: {
@@ -35,6 +35,6 @@ export const appConfig = {
     }
   },
 
-  HELLO_WORD: 'Hello'
+  HELLO_WORD: 'Welcome,'
 
 };

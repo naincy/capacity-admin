@@ -6,13 +6,10 @@ import PropTypes  from 'prop-types';
 import cx         from 'classnames';
 import UserPanel  from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
-import Horloge    from '../../horloge/Horloge';
 import Menu       from './menu/Menu';
 
 
 const AsideLeft = ({
-  connectionStatus,
-  userIsConnected,
   username,
   helloWord,
   userPicture,
@@ -44,12 +41,9 @@ const AsideLeft = ({
       <UserPanel
         hello={helloWord}
         username={username}
-        connectionStatus={connectionStatus}
-        online={userIsConnected}
         userPicture={userPicture}
         showUserPicture={showPicture}
       />
-      <Horloge />
 
       <SearchForm
         onSearchSubmit={(value) => console.log('searching: ', value)}
@@ -92,11 +86,6 @@ AsideLeft.propTypes = {
     })
   ).isRequired,
   currentView:      PropTypes.string,
-  connectionStatus: PropTypes.shape({
-    online:         PropTypes.string,
-    disconnected:   PropTypes.string
-  }),
-  userIsConnected:  PropTypes.bool,
   username:         PropTypes.string,
   userPicture:      PropTypes.any,
   showPicture:      PropTypes.bool,

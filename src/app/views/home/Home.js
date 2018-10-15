@@ -7,19 +7,15 @@ import PropTypes          from 'prop-types';
 import {
   AnimatedView,
   StatsCard,
-  EarningGraph,
+  // EarningGraph,
   Notifications,
-  WorkProgress,
-  TwitterFeed,
-  TodoListDemo,
-  TeamMatesDemo
+  WorkProgress
 }                         from '../../components';
 
 class Home extends PureComponent {
   static propTypes = {
     earningGraphLabels:   PropTypes.array,
     earningGraphDatasets: PropTypes.array,
-    teamMatesIsFetching:  PropTypes.bool,
     teamMates:            PropTypes.arrayOf(
       PropTypes.shape({
         picture:      PropTypes.string,
@@ -60,12 +56,11 @@ class Home extends PureComponent {
   }
 
   render() {
-    const {
-      teamMates,
-      teamMatesIsFetching,
-      earningGraphLabels,
-      earningGraphDatasets
-    } = this.props;
+    // const {
+    //   teamMates,
+    //   earningGraphLabels,
+    //   earningGraphDatasets
+    // } = this.props;
 
     return(
       <AnimatedView>
@@ -108,37 +103,12 @@ class Home extends PureComponent {
 
         <div className="row">
           <div className="col-md-8">
-            <EarningGraph
-              labels={earningGraphLabels}
-              datasets={earningGraphDatasets}
-            />
+            <WorkProgress />
           </div>
           <div className="col-lg-4">
             <Notifications />
           </div>
         </div>
-
-        <div className="row">
-          <div className="col-md-8">
-            <WorkProgress />
-          </div>
-          <div className="col-md-4">
-            <TwitterFeed />
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-md-5">
-            <TeamMatesDemo
-              isFetching={teamMatesIsFetching}
-              members={teamMates}
-            />
-          </div>
-          <div className="col-md-7">
-            <TodoListDemo />
-          </div>
-        </div>
-
       </AnimatedView>
     );
   }

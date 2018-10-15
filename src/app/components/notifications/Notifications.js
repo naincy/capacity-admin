@@ -27,9 +27,9 @@ const Notifications = () => (
     <Notification type={'info'}>
       <span>
         <strong>
-          Heads up!
+        Heads up!
         </strong>
-        This alert needs your attention, but it's not super important.
+        This alert needs your attention.
       </span>
     </Notification>
 
@@ -41,16 +41,6 @@ const Notifications = () => (
         Best check yo self, you're not looking too good.
       </span>
     </Notification>
-
-    <Notification type={'danger'}>
-      <span>
-        <strong>
-          Oh snap!
-        </strong>
-        Change a few things up and try submitting again.
-      </span>
-    </Notification>
-
   </NotificationPanel>
 );
 

@@ -3,8 +3,8 @@
 import React        from 'react';
 import PropTypes    from 'prop-types';
 import UserMenu     from './userMenu/UserMenu';
-import TaskMenu     from './taskMenu/TaskMenu';
-import MessageMenu  from './messageMenu/MessageMenu';
+// import TaskMenu     from './taskMenu/TaskMenu';
+// import MessageMenu  from './messageMenu/MessageMenu';
 import Button       from './button/Button';
 
 const Header = ({
@@ -31,8 +31,8 @@ const Header = ({
       />
       <div className="navbar-right">
         <ul className="nav navbar-nav">
-          <MessageMenu />
-          <TaskMenu />
+          {/* <MessageMenu />
+          <TaskMenu /> */}
           <UserMenu
             login={userLogin}
             firstname={userFirstname}

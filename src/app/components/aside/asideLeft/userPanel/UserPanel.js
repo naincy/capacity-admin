@@ -9,7 +9,7 @@ const UserPanel = (
   <div className="user-panel">
     {
       props.showUserPicture &&
-      <div className="pull-left image">
+      <div className="image">
         <img
           src={props.userPicture}
           className="img-circle"
@@ -17,26 +17,10 @@ const UserPanel = (
         />
       </div>
     }
-    <div className="pull-left info">
+    <div className="info">
       <p>
         { `${props.hello} ${props.username}` }
       </p>
-      <a
-        href="#">
-        { props.online &&
-          <i className="fa fa-circle text-success" />
-        }
-        { props.online &&
-          props.connectionStatus.online
-        }
-        {
-          !props.online &&
-          <i className="fa fa-circle text-default" />
-        }
-        { !props.online &&
-          props.connectionStatus.disconnected
-        }
-      </a>
     </div>
   </div>
 );
@@ -46,20 +30,12 @@ UserPanel.propTypes = {
   username:         PropTypes.string,
   showUserPicture:  PropTypes.bool,
   userPicture:      PropTypes.any,
-  connectionStatus: PropTypes.shape({
-    online:         PropTypes.string,
-    disconnected:   PropTypes.string
-  }),
   online:           PropTypes.bool
 };
 
 UserPanel.defaultProps = {
-  hello:    'Hello',
+  hello:    'Welcome,',
   username: 'Jane',
-  connectionStatus: {
-    online:       'Online',
-    disconnected: 'Disconnected'
-  },
   online:          false,
   showUserPicture: true
 };

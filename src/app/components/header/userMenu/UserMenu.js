@@ -66,49 +66,9 @@ const UserMenu = ({
       </li>
       <li>
         <a href="#">
-          <i className="fa fa-clock-o fa-fw pull-right" />
-          <span className="badge badge-success pull-right">
-            10
-          </span>
-          Updates
-        </a>
-        <a href="#">
-          <i className="fa fa-envelope-o fa-fw pull-right" />
-          <span className="badge badge-danger pull-right">
-            5
-          </span>
-          Messages
-        </a>
-        <a href="#">
-          <i className="fa fa-magnet fa-fw pull-right" />
-          <span className="badge badge-info pull-right">
-            3
-          </span>
-          Subscriptions
-        </a>
-        <a href="#">
-          <i className="fa fa-question fa-fw pull-right" />
-          <span className="badge pull-right">
-            11
-          </span>
-          FAQ
-        </a>
-      </li>
-      <li className="divider" />
-      <li>
-        <a href="#">
           <i className="fa fa-user fa-fw pull-right" />
           Profile
         </a>
-        <a
-          data-toggle="modal"
-          href="#modal-user-settings">
-          <i className="fa fa-cog fa-fw pull-right" />
-          Settings
-        </a>
-      </li>
-      <li className="divider" />
-      <li>
         <a onClick={onLogout}>
           <i className="fa fa-ban fa-fw pull-right" />
             Logout
